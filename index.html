@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rock-paper-scissors</title>
+        <link rel='stylesheet' href='style.css'>
+        <script src="code.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+      <div class='global'>
+        <div class="class1">
+            <div class='container1'> 
+            <div class="class1_1">
+                <ul>
+                    <li>ROCK</li>
+                    <li>PAPER</li>
+                    <li>SCISSORS</li>
+                </ul>
+            </div>
+
+            <div class="class1_2">
+                <ul>
+                    <li id='score'>SCORE</li>
+                    <li id='score_value'></li>
+                    <script>
+                        if(localStorage.getItem("score") === null )
+                        {document.getElementById("score_value").innerHTML = 0;}
+                        else
+                         {document.getElementById("score_value").innerHTML = localStorage.getItem("score");}
+                    </script>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class='class2' id='class2'>
+            
+            <div class='class2_1'>
+                <div class='paper' onclick="Game(0)"> <img id='paper' src = "images/icon-paper.svg" alt="My Happy SVG"/> </div>
+                <div class='scissors' onclick="Game(1)"> <img id='scissors' src = "images/icon-scissors.svg" alt="My Happy SVG"/> </div>
+            </div>
+            <img id='triangle'src="images/bg-triangle.svg">
+            <div class='class2_2'>
+                <div class='rock' onclick="Game(2)"> <img id='rock' src = "images/icon-rock.svg" alt="My Happy SVG"/> </div>
+            </div>
+        </div>
+        
+        <div class='class4' style="visibility: hidden;">
+
+            <div id='cercle1_1'> 
+                <div id='cercle1_2'> 
+                    <div id='cercle1_3'> 
+
+                        <span id='picked1'>YOU PICKED</span>
+                        <div class="images">
+                            <div class='paper' id="0">
+                                <img id='paper' src = "images/icon-paper.svg" alt="My Happy SVG"/>
+                            </div>
+                            <div class='rock' id="2">
+                                <img id='rock' src = "images/icon-rock.svg" alt="My Happy SVG"/>
+                            </div>
+                            <div class='scissors' id="1">
+                                <img id='paper' src = "images/icon-scissors.svg" alt="My Happy SVG"/>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div> 
+            </div>
+            
+            <div id='cercle2_1' > 
+                <div id='cercle2_2'> 
+                    <div id='cercle2_3'> 
+                        <span id='picked2'>THE HOUSE PICKED</span>
+                         <div class="images" id="images">
+                             <div class='paper' id="00" style="visibility: hidden;">
+                                 <img id='paper' src = "images/icon-paper.svg" alt="My Happy SVG"/>
+                             </div>
+                             <div class='rock' id="02" style="visibility: hidden;">
+                                 <img id='rock' src = "images/icon-rock.svg" alt="My Happy SVG"/>
+                             </div>
+                             <div class='scissors' id="01" style="visibility: hidden;">
+                                 <img id='paper' src = "images/icon-scissors.svg" alt="My Happy SVG"/>
+                             </div>
+                         </div> 
+                    </div> 
+                </div> 
+            </div>
+        </div>
+
+        <div class='WIN_GAIN' id="WIN_GAIN" style="visibility: hidden;">
+            <span id="WIN_LOSE"> </span>
+            <div id="AGAIN" onclick="Again()">PLAY AGAIN</div>
+        </div>
+
+        <div class="class3" > <div class='class3_1' onclick="show_Rules()">RULES</div> </div>
+      </div>
+
+      <div class="global2" id="global2">
+
+          <div class="container2" id="container2">
+              <div class="elm1"> <span>RULES</span>  <img onclick="Hide_Rules()" src="images/icon-close.svg"> </div>
+              
+              <div class="elm2"> <img src="images/image-rules.svg" alt="Rules"></div>   
+          </div>
+
+      </div>
+    </body>
+</html>

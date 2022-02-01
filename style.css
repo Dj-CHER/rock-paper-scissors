@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;600&display=swap');
+
+*
+{
+    margin : 0px;
+    font-family: 'Barlow Semi Condensed';
+}
+
+html{height: 100%}
+
+body{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(hsl(214, 47%, 23%) , hsl(237, 49%, 15%));
+    color:white;
+}
+
+.global
+{
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    display : grid;
+    grid-row-gap: 20px;
+    grid-template-areas: 'score'
+                         'select'
+                         'quit';
+}
+
+.class1{
+    grid-area: score;  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+}
+
+.class1 .container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width:450px;
+    height:100px;
+    border: 3px solid rgba(255, 255, 255, 0.76);
+    border-radius: 15px;
+}
+
+
+.class1 ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.class1_1 ul{
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.class1_2 ul{
+    margin-right: 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.877);
+}
+
+.class1_2 ul #score{
+    margin-top: 10px;
+    color: hsl(229, 64%, 46%);
+    font-size: 12px;
+    font-weight: 600;    
+    letter-spacing: 2px;;
+}
+
+.class1_2 ul #score_value{
+    margin-bottom: 10px;
+    color: hsl(229, 25%, 31%);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.class2{
+    grid-area: select;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.class2 img, .class4 img{
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 19px;
+    transition: width 0.05s, height 0.05s;
+}
+
+.class2 #paper:hover, .class2 #scissors:hover, .class2 #rock:hover
+{
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+}
+
+#paper, #scissors, #rock
+{
+box-shadow: 5px 7px rgba(0, 0, 0, 0.26);
+}
+
+.class2 #triangle
+{   margin-top: 50px;
+    background: none;
+    position: absolute;
+    height: 30%;
+    width: 200px;
+    z-index: -1;
+
+}
+
+.class2 .class2_1 {
+    width: 310px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.paper, .scissors, .rock{
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.paper{
+    background: radial-gradient(hsl(230, 89%, 62%) , hsl(230, 89%, 65%));
+}
+
+.scissors{
+    background: radial-gradient( hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.rock{
+    background:radial-gradient(hsl(349, 71%, 52%) , hsl(349, 70%, 56%));
+}
+
+.class3{
+    grid-area: quit;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.class3 .class3_1{
+    border: 1px solid white;
+    border-radius: 7px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 90px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.class3 .class3_1:hover{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.global2{
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.global2 .container2{
+    background-color: white;
+    border-radius: 15px;
+    transform: translateY(10px);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 370px;
+    width: 380px;
+}
+
+.global2 .container2 .elm1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.global2 .container2 .elm1 img{
+    width: 20px;
+    height: 20px;
+    margin-top: 13px;
+}
+
+.global2 .container2 .elm1 img:hover{
+cursor: pointer;
+}
+
+.global2 .container2 .elm1 span{
+    color: hsl(229, 25%, 31%);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.global2 .container2 .elm2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global2 .container2 .elm2 img{
+    width:270px;
+    margin-bottom: 10px;
+}
+
+.class4{
+    grid-area: select;
+    display: flex;
+    justify-content: center;
+}
+
+.class4 #cercle1_1, .class4 #cercle2_1{
+    width:320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s;
+}
+
+.class4 #cercle1_1{
+transform: translateX(80px);
+}
+
+.class4 #cercle2_1{
+    transform: translateX(-80px);
+}
+
+.class4 #cercle1_2, .class4 #cercle2_2{
+    width:240px;
+    height: 240px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.class4 #cercle1_3, .class4 #cercle2_3{
+    width:170px;
+    height:170px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+#picked1, #picked2{
+    transform: translateY(-18px);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.images{
+    height: 110px;
+    width: 110px;
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+.images .paper,.images .rock,.images .scissors{
+    justify-self: center;
+    position: absolute;
+}
+
+
+.WIN_GAIN{
+    grid-area: select;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.WIN_GAIN #WIN_LOSE{
+    transform: translateY(-80px);
+    font-size: 35px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.WIN_GAIN #AGAIN{
+    transform: translateY(-20px);
+    border-radius: 5px;
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: hsl(214, 47%, 23%);
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.WIN_GAIN #AGAIN:hover{
+    cursor: pointer;
+    color: tomato;
+}
+
+
+@media screen and (max-device-width: 375px){
+
+    .class3{
+        justify-content: center;
+    }
+    
+    .class2 #triangle{
+        height: 25%;
+    }
+ 
+    .WIN_GAIN{
+        justify-content: flex-end;
+    }
+
+        
+    }
+
+
+    @media screen and (max-device-width: 571px){
+
+        
+        .class2 #triangle{
+            height: 25%;
+        }
+     
+        }
+        
+
+
+
+
